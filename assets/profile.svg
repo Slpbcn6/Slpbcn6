@@ -1,143 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" onload="initPong(evt)">
   <defs>
+    <filter id="crt-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" fill-opacity="0.35" />
+    </pattern>
     <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
       <stop offset="0%" stop-color="#0a0a0a" />
       <stop offset="100%" stop-color="#020202" />
     </radialGradient>
-
-    <filter id="digitalGrain" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="4" result="noise" />
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.04 0" result="coloredNoise" />
-      <feComposite operator="in" in="coloredNoise" in2="SourceGraphic" result="monoNoise"/>
-      <feBlend mode="screen" in="SourceGraphic" in2="monoNoise" />
-    </filter>
-
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <rect width="100%" height="100%" fill="url(#bgGradient)" filter="url(#digitalGrain)" />
-  
-  <line x1="0" y1="-10" x2="1100" y2="-10" stroke="#00FF00" stroke-width="0.5" stroke-opacity="0.1">
-    <animate attributeName="y1" from="-10" to="310" dur="8s" repeatCount="indefinite" />
-    <animate attributeName="y2" from="-10" to="310" dur="8s" repeatCount="indefinite" />
-  </line>
-
-  <g font-family="Courier New, monospace" font-size="12">
+  <style>
+    text { font-family: 'Courier New', Courier, monospace; fill: #FFFFFF; }
+    .text-green { fill: #00FF00; }
+    .name { font-weight: 400; font-size: 40px; letter-spacing: -1.5px; } 
+    .meta { font-weight: 400; font-size: 14px; opacity: 0.8; }
+    .label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    .body { font-weight: 400; font-size: 14px; }
+    .cursor { animation: blink 0.8s step-end infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .led { animation: led-blink-soft 3s ease-in-out infinite; }
+    @keyframes led-blink-soft { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
     
-    <g transform="translate(50, 0)">
-        <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
-            <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="15" cy="42" fill="none" stroke="#00FF00" filter="url(#glow)">
-            <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
-            <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
-        </circle>
-        
-        <text x="30" y="45" fill="#00FF00" font-weight="bold" letter-spacing="1">
-            SYSTEM NOTE / 01
-            <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
-        </text>
-        
-        <line x1="30" y1="55" x2="300" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
-          <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
-        </line>
-        
-        <text x="30" y="80" fill="#FFFFFF" opacity="0.8">
-          <tspan x="30" dy="0">Design is a way of observing systems,</tspan>
-          <tspan x="30" dy="16">not producing isolated objects.</tspan>
-          <tspan x="30" dy="28">I work through iteration, constraints</tspan>
-          <tspan x="30" dy="16">and feedback loops to understand structure.</tspan>
-          <tspan x="30" dy="28">My goal is simple:</tspan>
-          <tspan x="30" dy="16">reduce noise, reduce entropy where I can,</tspan>
-          <tspan x="30" dy="16">leave things slightly more ordered</tspan>
-          <tspan x="30" dy="16">than before.</tspan>
-          <tspan x="30" dy="28">This is a personal practice</tspan>
-          <tspan x="30" dy="16">driven by curiosity.</tspan>
-        </text>
-    </g>
+    .wave { stroke: #FFFFFF; fill: none; pointer-events: none; filter: url(#crt-glow); }
+  </style>
 
-    <g transform="translate(400, 0)">
-        <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
-            <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
-        </circle>
-        <circle cx="15" cy="42" fill="none" stroke="#00FF00" filter="url(#glow)">
-            <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
-            <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
-            <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
-        </circle>
-        
-        <text x="30" y="45" fill="#00FF00" font-weight="bold" letter-spacing="1">
-            CURRENT FOCUS
-            <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
-        </text>
-        
-        <line x1="30" y1="55" x2="300" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
-          <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
-        </line>
-        
-        <circle cx="15" cy="77" r="2" fill="#FFFFFF" filter="url(#glow)">
-            <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-        </circle>
-        <circle cx="15" cy="77" fill="none" stroke="#FFFFFF" filter="url(#glow)">
-            <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-            <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-            <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-        </circle>
-        
-        <text x="30" y="80" fill="#FFFFFF" opacity="0.8">
-          <tspan x="30" dy="0" fill="#00FF00" font-weight="bold">Biotic Hardware</tspan>
-          <tspan x="30" dy="28">A computational study of structure.</tspan>
-          <tspan x="30" dy="16">A personal sandbox for understanding</tspan>
-          <tspan x="30" dy="16">systems through simulation.</tspan>
-          <tspan x="30" dy="28">I use morphological datasets as input</tspan>
-          <tspan x="30" dy="16">to explore how patterns behave when modeled</tspan>
-          <tspan x="30" dy="16">as abstract networks.</tspan>
-          <tspan x="30" dy="28">The goal is learning how structure,</tspan>
-          <tspan x="30" dy="16">rules and feedback generate behavior.</tspan>
-          <tspan x="30" dy="16">Ongoing learning, not a finished framework.</tspan>
-        </text>
-    </g>
-
-    <g transform="translate(750, 0)">
-        <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
-            <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="1s"/>
-        </circle>
-        <circle cx="15" cy="42" fill="none" stroke="#00FF00" filter="url(#glow)">
-            <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
-            <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
-            <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
-        </circle>
-        
-        <text x="30" y="45" fill="#00FF00" font-weight="bold" letter-spacing="1">
-            STATUS
-            <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
-        </text>
-        
-        <line x1="30" y1="55" x2="250" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
-          <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
-        </line>
-        
-        <text x="30" y="80" fill="#FFFFFF" opacity="0.8">
-          <tspan x="30" dy="0">current version v1.0-baseline</tspan>
-          <tspan x="30" dy="28">status active, </tspan>
-          <tspan x="30" dy="28">work in progress</tspan>
-          <tspan x="30" dy="16">still learning, still adjusting</tspan>
-          <tspan x="30" dy="28">nothing final — just iteration</tspan>
-          <tspan x="30" dy="16">step by step understanding</tspan>
-        </text>
-
-        <text x="135" y="108" fill="#00FF00" font-weight="bold">
-            (v1.1)
-            <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
-        </text>
-    </g>
+  <g id="backgroundLayer">
+    <rect x="0" y="0" width="900" height="320" fill="url(#bgGradient)" />
+    <g id="wavesContainer"></g>
   </g>
+
+  <g id="gameLayer" filter="url(#crt-glow)">
+    <g id="gameContent">
+        <g id="ballTrail"></g>
+        <rect id="ball" x="442" y="152" width="16" height="16" fill="white" />
+        <rect id="padL" x="20" y="120" width="10" height="80" fill="white" />
+        <rect id="padR" x="870" y="120" width="10" height="80" fill="white" />
+    </g>
+    <rect width="900" height="320" fill="url(#scanlines)" pointer-events="none" />
+  </g>
+
+  <g id="textGroup">
+    <text x="150" y="70" class="name">Santi López Puiggené</text>
+    <text x="150" y="100" class="meta">github.com/slpbcn6</text>
+    <circle id="led1" cx="140" cy="156" r="4" fill="#00FF00" class="led" />
+    <text x="150" y="160" class="text-green label">Graphic designer</text>
+    <circle id="led2" cx="490" cy="156" r="4" fill="#00FF00" class="led" />
+    <text x="500" y="160" class="text-green label">Interests</text>
+    <text x="150" y="190" class="body">Most of what’s here comes from</text>
+    <text x="150" y="210" class="body">personal curiosity, self-learning</text>
+    <text x="150" y="230" class="body">and experimenting with systems,</text>
+    <text x="150" y="250" class="body">structure and code</text>
+    <text x="500" y="190" class="body">Self-directed visual research</text>
+    <text x="500" y="210" class="body">Computational / generative curiosity</text>
+    <text x="500" y="230" class="body">Small experimental systems</text>
+    <text x="500" y="250" class="body">Learning through making<tspan class="cursor">_</tspan></text>
+  </g>
+
+  <script type="text/javascript"><![CDATA[
+    function initPong(evt) {
+      const svgDoc = evt.target;
+      const ballEl = svgDoc.getElementById('ball');
+      const padLEl = svgDoc.getElementById('padL');
+      const padREl = svgDoc.getElementById('padR');
+      const ballTrailEl = svgDoc.getElementById('ballTrail');
+      const gameContentEl = svgDoc.getElementById('gameContent');
+      const textGroupEl = svgDoc.getElementById('textGroup');
+      const wavesContainer = svgDoc.getElementById('wavesContainer');
+
+      let ball = { x: 442, y: 152, vx: -8, vy: 4 };
+      let padL = { y: 120, h: 80, target: 120, vy: 0 };
+      let padR = { y: 120, h: 80, target: 120, vy: 0 };
+
+      let sequence = [20, -20, 30, -30, 10, -10, 25, -25, 15, -15, 5, -5];
+      let hitCount = 0;
+      let frame = 0;
+      let shakeFrames = 0;
+      let speedMult = 1.0;
+      const MAX_SPEED_MULT = 1.36;
+      const bounds = 320 - 16;
+      let ballHistory = []; 
+      
+      const waves = [];
+      const nodes = [
+        { x: 140, y: 156 },
+        { x: 490, y: 156 }
+      ];
+
+      function createWave(x, y, isSecondary) {
+        const wave = {
+            x: x,
+            y: y,
+            r: 2,
+            opacity: isSecondary ? 0.38 : 0.64,
+            speed: isSecondary ? 1.5 : 3.5,
+            fade: isSecondary ? 0.006 : 0.004,
+            isSecondary: isSecondary,
+            hitNodes: new Set()
+        };
+        waves.push(wave);
+        const el = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        el.setAttribute('cx', wave.x);
+        el.setAttribute('cy', wave.y);
+        el.setAttribute('class', 'wave');
+        el.setAttribute('stroke-width', isSecondary ? 0.5 : 1.5);
+        wave.element = el;
+        wavesContainer.appendChild(el);
+      }
+
+      function predictY(startX, startY, vx, vy, targetX) {
+        let dx = Math.abs(targetX - startX);
+        let time = dx / Math.abs(vx);
+        let yPos = startY + vy * time;
+        while (yPos < 0 || yPos > bounds) {
+            if (yPos < 0) yPos = -yPos;
+            if (yPos > bounds) yPos = bounds - (yPos - bounds);
+        }
+        return yPos;
+      }
+
+      function updateActiveTarget(side) {
+        let activeOffset = sequence[hitCount % 12];
+        if (side === 'left') {
+          let impactY = predictY(ball.x, ball.y, ball.vx, ball.vy, 30);
+          padL.target = impactY - (padL.h / 2) + activeOffset;
+          padL.target = Math.max(0, Math.min(320 - padL.h, padL.target));
+        } else {
+          let impactY = predictY(ball.x, ball.y, ball.vx, ball.vy, 870);
+          padR.target = impactY - (padR.h / 2) + activeOffset;
+          padR.target = Math.max(0, Math.min(320 - padR.h, padR.target));
+        }
+      }
+
+      function loop() {
+        frame++;
+        ball.x += ball.vx;
+        ball.y += ball.vy;
+
+        if (ball.y <= 0 || ball.y >= bounds) {
+          ball.vy *= -1;
+          ball.y = (ball.y <= 0) ? 0 : bounds;
+        }
+
+        if (ball.vx < 0 && ball.x < 450) {
+            updateActiveTarget('left');
+        } else if (ball.vx > 0 && ball.x > 450) {
+            updateActiveTarget('right');
+        }
+
+        if ((ball.vx < 0 && ball.x <= 30 && ball.x + 16 >= 20) || (ball.vx > 0 && ball.x + 16 >= 870 && ball.x <= 880)) {
+          let hitLeft = (ball.vx < 0);
+          let pad = hitLeft ? padL : padR;
+          if (ball.y >= pad.y - 16 && ball.y <= pad.y + pad.h) {
+            speedMult = Math.min(speedMult * 1.03, MAX_SPEED_MULT);
+            ball.vx = (ball.vx > 0 ? -8 : 8) * speedMult;
+            let impact = (ball.y - (pad.y + pad.h / 2)) / (pad.h / 2);
+            ball.vy += impact * 2; 
+            hitCount++;
+            shakeFrames = 8;
+            createWave(hitLeft ? 30 : 870, ball.y + 8, false);
+          }
+        }
+        
+        if (ball.x <= 0 || ball.x >= 900) {
+            ball.vx *= -1;
+        }
+
+        for (let i = waves.length - 1; i >= 0; i--) {
+            let w = waves[i];
+            w.r += w.speed;
+            w.opacity -= w.fade;
+
+            if (w.opacity <= 0) {
+                wavesContainer.removeChild(w.element);
+                waves.splice(i, 1);
+                continue;
+            }
+
+            w.element.setAttribute('r', w.r);
+            w.element.setAttribute('stroke-opacity', w.opacity);
+
+            if (!w.isSecondary) {
+                nodes.forEach((n, idx) => {
+                    if (w.hitNodes.has(idx)) return;
+                    let dist = Math.sqrt(Math.pow(w.x - n.x, 2) + Math.pow(w.y - n.y, 2));
+                    if (Math.abs(dist - w.r) <= w.speed) {
+                        w.hitNodes.add(idx);
+                        createWave(n.x, n.y, true);
+                    }
+                });
+            }
+        }
+
+        ballHistory.unshift({ x: ball.x, y: ball.y });
+        if (ballHistory.length > Math.max(5, Math.floor(12 * speedMult))) ballHistory.pop();
+
+        while (ballTrailEl.childNodes.length < ballHistory.length) {
+          let r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          r.setAttribute('fill', 'white');
+          ballTrailEl.appendChild(r);
+        }
+        while (ballTrailEl.childNodes.length > ballHistory.length) ballTrailEl.removeChild(ballTrailEl.firstChild);
+
+        for (let i = 0; i < ballHistory.length; i++) {
+          let seg = ballTrailEl.childNodes[i];
+          seg.setAttribute('x', ballHistory[i].x);
+          seg.setAttribute('y', ballHistory[i].y);
+          seg.setAttribute('width', 16 * (1 - (i / ballHistory.length) * 0.5));
+          seg.setAttribute('height', 16 * (1 - (i / ballHistory.length) * 0.5));
+          seg.setAttribute('opacity', (1 - (i / ballHistory.length)) * 0.32);
+        }
+
+        padL.vy += (padL.target - padL.y) * 0.05;
+        padL.vy *= 0.85;
+        padL.y += padL.vy;
+
+        padR.vy += (padR.target - padR.y) * 0.05;
+        padR.vy *= 0.85;
+        padR.y += padR.vy;
+
+        let jitterX = (Math.random() > 0.95) ? (Math.random() - 0.5) * 2 : 0;
+        let jitterY = (Math.random() > 0.95) ? (Math.random() - 0.5) * 2 : 0;
+        gameContentEl.setAttribute('transform', 'translate(' + jitterX + ',' + jitterY + ')');
+        
+        if (shakeFrames > 0) {
+            let sx = (Math.random() - 0.5) * 6;
+            let sy = (Math.random() - 0.5) * 6;
+            textGroupEl.setAttribute('transform', 'translate(' + sx + ',' + sy + ')');
+            shakeFrames--;
+        } else {
+            textGroupEl.removeAttribute('transform');
+        }
+
+        ballEl.setAttribute('x', ball.x);
+        ballEl.setAttribute('y', ball.y);
+        padLEl.setAttribute('y', padL.y);
+        padREl.setAttribute('y', padR.y);
+
+        requestAnimationFrame(loop);
+      }
+      requestAnimationFrame(loop);
+    }
+  ]]></script>
 </svg>

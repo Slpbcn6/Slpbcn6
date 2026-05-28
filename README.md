@@ -2,7 +2,7 @@
 
   <img src="./assets/banner.webp" width="900" alt="Banner 1" />
   <br>
-  <img src="./assets/banner2.webp" width="900" alt="Banner 2" />
+  <img src="./assets/profile2.svg" width="900" alt="Banner 2" />
   <br>
 
   <a href="https://github.com/Slpbcn6/biotic-hardware">
