@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- © 2025 Santi Lopez Puiggene — https://github.com/Slpbcn6 -->
-<!-- Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ -->
-<!-- Attribution required. Forks welcome. Silent copies are not. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -15 980 330">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -15 980 330" fill="none">
   <defs>
     <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
       <stop offset="0%" stop-color="#0a0a0a" />
@@ -32,9 +29,9 @@
     <animate attributeName="y2" from="-10" to="310" dur="8s" repeatCount="indefinite" />
   </line>
 
-  <g font-family="Courier New, monospace" font-size="12">
+  <g font-family="Courier New, monospace" font-size="15">
     
-    <g transform="translate(50, 0)">
+    <g transform="translate(60, 0)">
         <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
             <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" />
         </circle>
@@ -44,8 +41,8 @@
             <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
         </circle>
         
-        <text x="30" y="45" fill="#00FF00" font-weight="bold" letter-spacing="1">
-            SYSTEM NOTE / 01
+        <text x="30" y="45" fill="#00FF01" font-weight="bold" letter-spacing="1">
+            01 / SYSTEM NOTE
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
         </text>
         
@@ -53,21 +50,20 @@
           <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
         </line>
         
-        <text x="30" y="80" fill="#FFFFFF" opacity="0.8">
-          <tspan x="30" dy="0">Design is a way of observing systems,</tspan>
-          <tspan x="30" dy="16">not producing isolated objects.</tspan>
-          <tspan x="30" dy="28">I work through iteration, constraints</tspan>
-          <tspan x="30" dy="16">and feedback loops to understand structure.</tspan>
-          <tspan x="30" dy="28">My goal is simple:</tspan>
-          <tspan x="30" dy="16">reduce noise, reduce entropy where I can,</tspan>
-          <tspan x="30" dy="16">leave things slightly more ordered</tspan>
-          <tspan x="30" dy="16">than before.</tspan>
-          <tspan x="30" dy="28">This is a personal practice</tspan>
-          <tspan x="30" dy="16">driven by curiosity.</tspan>
+        <text x="30" y="85">
+          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">I build small systems to</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">understand how they behave.</tspan>
+          
+          <tspan x="30" dy="30" fill="#888888">Structure changes perception.</tspan>
+          <tspan x="30" dy="20" fill="#888888">Iterative adjustment over</tspan>
+          <tspan x="30" dy="20" fill="#888888">rigid planning.</tspan>
+          
+          <tspan x="30" dy="30" fill="#00FF41">Design, editorial, and</tspan>
+          <tspan x="30" dy="20" fill="#00FF41">systemic research.</tspan>
         </text>
     </g>
 
-    <g transform="translate(400, 0)">
+    <g transform="translate(380, 0)">
         <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
             <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
         </circle>
@@ -77,8 +73,8 @@
             <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
         </circle>
         
-        <text x="30" y="45" fill="#00FF00" font-weight="bold" letter-spacing="1">
-            CURRENT FOCUS
+        <text x="30" y="45" fill="#00FF01" font-weight="bold" letter-spacing="1">
+            02 / BIOTIC HARDWARE
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
         </text>
         
@@ -86,30 +82,22 @@
           <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
         </line>
         
-        <circle cx="15" cy="77" r="2" fill="#FFFFFF" filter="url(#glow)">
-            <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-        </circle>
-        <circle cx="15" cy="77" fill="none" stroke="#FFFFFF" filter="url(#glow)">
-            <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-            <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-            <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.7s"/>
-        </circle>
-        
-        <text x="30" y="80" fill="#FFFFFF" opacity="0.8">
-          <tspan x="30" dy="0" fill="#00FF00" font-weight="bold">Biotic Hardware</tspan>
-          <tspan x="30" dy="28">A computational study of structure.</tspan>
-          <tspan x="30" dy="16">A personal sandbox for understanding</tspan>
-          <tspan x="30" dy="16">systems through simulation.</tspan>
-          <tspan x="30" dy="28">I use morphological datasets as input</tspan>
-          <tspan x="30" dy="16">to explore how patterns behave when modeled</tspan>
-          <tspan x="30" dy="16">as abstract networks.</tspan>
-          <tspan x="30" dy="28">The goal is learning how structure,</tspan>
-          <tspan x="30" dy="16">rules and feedback generate behavior.</tspan>
-          <tspan x="30" dy="16">Ongoing learning, not a finished framework.</tspan>
+        <text x="30" y="85">
+          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Deterministic pipeline for</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">morphological benchmarking.</tspan>
+          
+          <tspan x="30" dy="30" fill="#888888">Process: Morphology → Mapping</tspan>
+          <tspan x="30" dy="20" fill="#888888">→ Array Factor → Metrics.</tspan>
+          
+          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">Comparative: Fractal vs.</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">Botanical morphologies.</tspan>
+          
+          <tspan x="30" dy="30" fill="#00FF41">Reproducible scalar contracts</tspan>
+          <tspan x="30" dy="20" fill="#00FF41">&amp; tensor states.</tspan>
         </text>
     </g>
 
-    <g transform="translate(750, 0)">
+    <g transform="translate(700, 0)">
         <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
             <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="1s"/>
         </circle>
@@ -119,27 +107,29 @@
             <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
         </circle>
         
-        <text x="30" y="45" fill="#00FF00" font-weight="bold" letter-spacing="1">
-            STATUS
+        <text x="30" y="45" fill="#00FF01" font-weight="bold" letter-spacing="1">
+            03 / STATUS
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
         </text>
         
-        <line x1="30" y1="55" x2="250" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
+        <line x1="30" y1="55" x2="300" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
           <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
         </line>
         
-        <text x="30" y="80" fill="#FFFFFF" opacity="0.8">
-          <tspan x="30" dy="0">current version v1.0-baseline</tspan>
-          <tspan x="30" dy="28">status active, </tspan>
-          <tspan x="30" dy="28">work in progress</tspan>
-          <tspan x="30" dy="16">still learning, still adjusting</tspan>
-          <tspan x="30" dy="28">nothing final — just iteration</tspan>
-          <tspan x="30" dy="16">step by step understanding</tspan>
-        </text>
-
-        <text x="135" y="108" fill="#00FF00" font-weight="bold">
-            (v1.1)
+        <text x="30" y="85">
+          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Current: v1.1 Baseline</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">[Stable]</tspan>
+          
+          <tspan x="30" dy="30" fill="#888888">Pipeline: Deterministic</tspan>
+          <tspan x="30" dy="20" fill="#888888">Seed-tracked</tspan>
+          
+          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">State: Iterative development</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">active</tspan>
+          
+          <tspan x="30" dy="30" fill="#00FF41">Roadmap: v1.2 in progress.</tspan>
+          <tspan x="30" dy="30" fill="#00FF41" font-weight="bold">[ SYSTEM: ONLINE ]
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+          </tspan>
         </text>
     </g>
   </g>
