@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -15 980 330" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -12 1000 332" fill="none">
   <defs>
     <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
       <stop offset="0%" stop-color="#0a0a0a" />
@@ -60,6 +60,8 @@
           
           <tspan x="30" dy="30" fill="#00FF41">Design, editorial, and</tspan>
           <tspan x="30" dy="20" fill="#00FF41">systemic research.</tspan>
+          
+          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.6">Learning through making.</tspan>
         </text>
     </g>
 
@@ -127,7 +129,7 @@
           <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">active</tspan>
           
           <tspan x="30" dy="30" fill="#00FF41">Roadmap: v1.2 in progress.</tspan>
-          <tspan x="30" dy="30" fill="#00FF41" font-weight="bold">[ SYSTEM: ONLINE ]
+          <tspan x="30" dy="20" fill="#00FF41" font-weight="bold">[ SYSTEM: ONLINE ]
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
           </tspan>
         </text>
