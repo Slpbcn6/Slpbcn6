@@ -6,7 +6,7 @@
   <br>
 
   <a href="https://github.com/Slpbcn6/biotic-hardware">
-    <img src="https://gh-readme-stats.vercel.app/api/pin?username=Slpbcn6&repo=biotic-hardware&theme=dark&icon_color=00FF00" alt="Biotic Hardware" />
+    <img src="https://gh-readme-stats.vercel.app/api/pin?username=Slpbcn6&repo=biotic-hardware&theme=dark&icon_color=00FF00&cache_seconds=1800" alt="Biotic Hardware" />
   </a>
   
 <div align="center">
