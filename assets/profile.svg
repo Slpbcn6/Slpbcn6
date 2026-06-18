@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -12 1000 332" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 -18 1000 338" fill="none">
   <defs>
     <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
       <stop offset="0%" stop-color="#0a0a0a" />
@@ -31,105 +31,106 @@
 
   <g font-family="Courier New, monospace" font-size="15">
     
-    <g transform="translate(60, 0)">
-        <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
+    <g transform="translate(82, 0)">
+        <circle cx="15" cy="27" r="4" fill="#00FF00" filter="url(#glow)">
             <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" />
         </circle>
-        <circle cx="15" cy="42" fill="none" stroke="#00FF00" filter="url(#glow)">
+        <circle cx="15" cy="27" fill="none" stroke="#00FF00" filter="url(#glow)">
             <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
             <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
             <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" />
         </circle>
         
-        <text x="30" y="45" fill="#00FF01" font-weight="bold" letter-spacing="1">
+        <text x="30" y="30" fill="#00FF01" font-weight="bold" letter-spacing="1">
             01 / SYSTEM NOTE
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
         </text>
         
-        <line x1="30" y1="55" x2="300" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
+        <line x1="30" y1="40" x2="300" y2="40" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
           <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
         </line>
         
-        <text x="30" y="85">
+        <text x="30" y="70">
           <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">I build small systems to</tspan>
           <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">understand how they behave.</tspan>
           
-          <tspan x="30" dy="30" fill="#888888">Structure changes perception.</tspan>
+          <tspan x="30" dy="44" fill="#888888">Structure changes perception.</tspan>
           <tspan x="30" dy="20" fill="#888888">Iterative adjustment over</tspan>
           <tspan x="30" dy="20" fill="#888888">rigid planning.</tspan>
           
-          <tspan x="30" dy="30" fill="#00FF41">Design, editorial, and</tspan>
+          <tspan x="30" dy="43" fill="#00FF41">Design, editorial, and</tspan>
           <tspan x="30" dy="20" fill="#00FF41">systemic research.</tspan>
           
-          <tspan x="30" dy="30" fill="#888888">Observe, measure, understand.</tspan>
+          <tspan x="30" dy="43" fill="#888888">Observe, measure, understand.</tspan>
         </text>
     </g>
 
-    <g transform="translate(380, 0)">
-        <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
+    <g transform="translate(402, 0)">
+        <circle cx="15" cy="27" r="4" fill="#00FF00" filter="url(#glow)">
             <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
         </circle>
-        <circle cx="15" cy="42" fill="none" stroke="#00FF00" filter="url(#glow)">
+        <circle cx="15" cy="27" fill="none" stroke="#00FF00" filter="url(#glow)">
             <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
             <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
             <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
         </circle>
         
-        <text x="30" y="45" fill="#00FF01" font-weight="bold" letter-spacing="1">
+        <text x="30" y="30" fill="#00FF01" font-weight="bold" letter-spacing="1">
             02 / BIOTIC HARDWARE
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
         </text>
         
-        <line x1="30" y1="55" x2="300" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
+        <line x1="30" y1="40" x2="300" y2="40" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
           <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
         </line>
         
-        <text x="30" y="85">
+        <text x="30" y="70">
           <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Deterministic pipeline for</tspan>
           <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">morphological benchmarking.</tspan>
           
-          <tspan x="30" dy="30" fill="#888888">Process: Morphology → Mapping</tspan>
+          <tspan x="30" dy="30" fill="#888888">Process: Morphology → Coupling</tspan>
           <tspan x="30" dy="20" fill="#888888">→ Array Factor → Metrics.</tspan>
           
-          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">Comparative: Fractal vs.</tspan>
-          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">Botanical morphologies.</tspan>
+          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">Comparative: 5 morphologies —</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">Fractal, Botanical, Fibonacci,</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">Voronoi, Random.</tspan>
           
-          <tspan x="30" dy="30" fill="#00FF41">Reproducible scalar contracts</tspan>
-          <tspan x="30" dy="20" fill="#00FF41">&amp; tensor states.</tspan>
+          <tspan x="30" dy="30" fill="#00FF41">N=30 seeds. Welch + Holm +</tspan>
+          <tspan x="30" dy="20" fill="#00FF41">Hedges' g. Dual stochastic</tspan>
+          <tspan x="30" dy="20" fill="#00FF41">control: Voronoi + Random.</tspan>
         </text>
     </g>
 
-    <g transform="translate(700, 0)">
-        <circle cx="15" cy="42" r="4" fill="#00FF00" filter="url(#glow)">
+    <g transform="translate(722, 0)">
+        <circle cx="15" cy="27" r="4" fill="#00FF00" filter="url(#glow)">
             <animate attributeName="opacity" values="1;0;0" keyTimes="0;0.375;1" dur="4s" repeatCount="indefinite" begin="1s"/>
         </circle>
-        <circle cx="15" cy="42" fill="none" stroke="#00FF00" filter="url(#glow)">
+        <circle cx="15" cy="27" fill="none" stroke="#00FF00" filter="url(#glow)">
             <animate attributeName="r" values="0;60;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
             <animate attributeName="opacity" values="0.375;0;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
             <animate attributeName="stroke-width" values="0.4;0.05;0;0" keyTimes="0;0.375;0.376;1" dur="4s" repeatCount="indefinite" begin="1s"/>
         </circle>
         
-        <text x="30" y="45" fill="#00FF01" font-weight="bold" letter-spacing="1">
+        <text x="30" y="30" fill="#00FF01" font-weight="bold" letter-spacing="1">
             03 / STATUS
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
         </text>
         
-        <line x1="30" y1="55" x2="300" y2="55" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
+        <line x1="30" y1="40" x2="300" y2="40" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4,4">
           <animate attributeName="stroke-dashoffset" from="8" to="0" dur="3s" repeatCount="indefinite" />
         </line>
         
-        <text x="30" y="85">
-          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Current: v1.1 Baseline</tspan>
-          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">[Stable]</tspan>
+        <text x="30" y="70">
+          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Current: v1.2.6 [Stable]</tspan>
           
-          <tspan x="30" dy="30" fill="#888888">Pipeline: Deterministic</tspan>
+          <tspan x="30" dy="42" fill="#888888">Pipeline: Deterministic</tspan>
           <tspan x="30" dy="20" fill="#888888">Seed-tracked</tspan>
           
-          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">State: Iterative development</tspan>
-          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">active</tspan>
+          <tspan x="30" dy="43" fill="#FFFFFF" fill-opacity="0.8">State: Reproducible,</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">still learning</tspan>
           
-          <tspan x="30" dy="30" fill="#00FF41">Roadmap: v1.2 in progress.</tspan>
-          <tspan x="30" dy="20" fill="#00FF41" font-weight="bold">[ SYSTEM: ONLINE ]
+          <tspan x="30" dy="43" fill="#00FF41">Roadmap: v1.3 in design.</tspan>
+          <tspan x="30" dy="42" fill="#00FF41" font-weight="bold">[ SYSTEM: ONLINE ]
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
           </tspan>
         </text>
