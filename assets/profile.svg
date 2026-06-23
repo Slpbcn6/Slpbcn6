@@ -91,9 +91,9 @@
           <tspan x="30" dy="30" fill="#888888">Process: Morphology → Coupling</tspan>
           <tspan x="30" dy="20" fill="#888888">→ Array Factor → Metrics.</tspan>
           
-          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">Comparative: 5 morphologies —</tspan>
-          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">Fractal, Botanical, Fibonacci,</tspan>
-          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">Voronoi, Random.</tspan>
+          <tspan x="30" dy="30" fill="#FFFFFF" fill-opacity="0.8">Comparative: 10 morphologies —</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">botanical &amp; fractal vs eight</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">geometric/stochastic controls.</tspan>
           
           <tspan x="30" dy="30" fill="#00FF41">N=30 seeds. Welch + Holm +</tspan>
           <tspan x="30" dy="20" fill="#00FF41">Hedges' g. Dual stochastic</tspan>
@@ -121,16 +121,19 @@
         </line>
         
         <text x="30" y="70">
-          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Current: v1.2.6 [Stable]</tspan>
+          <tspan x="30" dy="0" fill="#FFFFFF" fill-opacity="0.8">Current:</tspan>
+          <tspan x="108" dy="0" fill="#00FF41" font-weight="bold">v1.4.1 [Stable]
+              <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+          </tspan>
           
-          <tspan x="30" dy="42" fill="#888888">Pipeline: Deterministic</tspan>
-          <tspan x="30" dy="20" fill="#888888">Seed-tracked</tspan>
+          <tspan x="30" dy="42" fill="#888888">Archived: Zenodo DOI +</tspan>
+          <tspan x="30" dy="20" fill="#888888">OSF — open science</tspan>
           
           <tspan x="30" dy="43" fill="#FFFFFF" fill-opacity="0.8">State: Reproducible,</tspan>
-          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">still learning</tspan>
+          <tspan x="30" dy="20" fill="#FFFFFF" fill-opacity="0.8">honest by design</tspan>
           
-          <tspan x="30" dy="43" fill="#00FF41">Roadmap: v1.3 in design.</tspan>
-          <tspan x="30" dy="42" fill="#00FF41" font-weight="bold">[ SYSTEM: ONLINE ]
+          <tspan x="30" dy="43" fill="#00FF41">Scope: closed &amp; archived</tspan>
+          <tspan x="30" dy="42" fill="#00FF41" font-weight="bold">[ SYSTEM: ARCHIVED ]
             <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
           </tspan>
         </text>
